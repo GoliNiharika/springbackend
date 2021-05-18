@@ -1,6 +1,8 @@
 package com.niharika.coursmanager.controller.Imp;
 
+import java.util.ArrayList;
 import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,5 +36,11 @@ public class Student implements IStudent{
 		// TODO Auto-generated method stub
 		return studentService.updateStudentDetails(s);
 	}
+	@Override
+	public Integer addMultipleStudentDetails(ArrayList<com.niharika.coursmanager.p1.Student> s) {
+		// TODO Auto-generated method stub
+		return studentService.addMultipleStudentDetails(s);
+	}
+	
 
 }

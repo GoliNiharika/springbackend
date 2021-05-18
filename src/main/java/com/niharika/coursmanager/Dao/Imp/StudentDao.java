@@ -64,6 +64,8 @@ public class StudentDao implements IStudentDao{
 		((MapSqlParameterSource) sqlPara).addValue("password", s.getPassword());
 		return namedParameterJdbcTemplate.update(addStudent, sqlPara);
 	}
+	
+	
 
 	@Override
 	public Integer deleteStudentDetails(int roll) {
@@ -84,6 +86,22 @@ public class StudentDao implements IStudentDao{
 		((MapSqlParameterSource) sqlPara).addValue("email", s.getEmail());
 		((MapSqlParameterSource) sqlPara).addValue("password", s.getPassword());
 		return namedParameterJdbcTemplate.update(updateStudent, sqlPara);
+	}
+
+	@Override
+	public Integer addMultipleStudentDetails(ArrayList<Student> s) {
+		// TODO Auto-generated method stub
+
+		for (Student st : s) {
+			SqlParameterSource sqlPara = new MapSqlParameterSource();
+			((MapSqlParameterSource) sqlPara).addValue("roll", st.getRoll());
+			((MapSqlParameterSource) sqlPara).addValue("name", st.getName());
+			((MapSqlParameterSource) sqlPara).addValue("email", st.getEmail());
+			((MapSqlParameterSource) sqlPara).addValue("password", st.getPassword());
+			System.out.println(st.getEmail());
+			namedParameterJdbcTemplate.update(addStudent, sqlPara);
+		}
+		return 1;
 	}
 
 }

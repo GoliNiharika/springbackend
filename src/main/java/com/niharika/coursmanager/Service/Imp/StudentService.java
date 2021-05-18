@@ -1,5 +1,6 @@
 package com.niharika.coursmanager.Service.Imp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,6 +54,17 @@ public class StudentService implements IStudentService{
 		// TODO Auto-generated method stub
 		try{
 			return studentDao.updateStudentDetails(s);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	@Override
+	public Integer addMultipleStudentDetails(ArrayList<Student> s) {
+		// TODO Auto-generated method stub
+		try{
+			return studentDao.addMultipleStudentDetails(s);
 		}catch(Exception e) {
 			e.printStackTrace();
 			return null;

@@ -8,4 +8,5 @@ public interface IStudentDao {
 	public Integer addStudentDetails(Student s);
 	public Integer deleteStudentDetails(int roll);
 	public Integer updateStudentDetails(Student s);
+	public Integer addMultipleStudentDetails(ArrayList<Student> s);
 }

@@ -1,5 +1,6 @@
 package com.niharika.coursmanager.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -28,4 +29,8 @@ public interface IStudent {
 	@CrossOrigin
 	@PostMapping("/updateStudent")
 	Integer updateStudentDetails(@RequestBody Student s);
+	
+	@CrossOrigin
+	@PostMapping("/addMultipleStudents")
+	Integer addMultipleStudentDetails(@RequestBody ArrayList<Student> s);
 }
