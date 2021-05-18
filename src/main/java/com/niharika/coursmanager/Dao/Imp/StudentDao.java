@@ -45,7 +45,7 @@ public class StudentDao implements IStudentDao{
 		for(Map<String, Object> row : li2) {
 			Student st = new Student();
 			
-			st.setRoll((BigDecimal) row.get("ROLL"));
+			st.setRoll((int) row.get("ROLL"));
 			st.setName((String) row.get("NAME"));
 			st.setEmail((String) row.get("EMAIL"));
 			st.setPassword((String) row.get("PASSWORD"));

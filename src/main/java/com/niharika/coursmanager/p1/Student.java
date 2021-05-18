@@ -3,16 +3,16 @@ package com.niharika.coursmanager.p1;
 import java.math.BigDecimal;
 
 public class Student {
-	private BigDecimal roll;
+	private int roll;
 	private String name;
 	private String email;
 	private String password;
 	
 	
-	public BigDecimal getRoll() {
+	public int getRoll() {
 		return roll;
 	}
-	public void setRoll(BigDecimal roll) {
+	public void setRoll(int roll) {
 		this.roll = roll;
 	}
 	public String getName() {
